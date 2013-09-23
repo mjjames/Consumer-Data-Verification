@@ -1,4 +1,4 @@
-﻿namespace MKS.EmailValidation.EmailVerificationServices
+﻿namespace MKS.ConsumerDataVerification.Models
 {
     public class PostcodeAnywhereEmailResult
     {

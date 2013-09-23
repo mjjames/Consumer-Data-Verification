@@ -1,4 +1,4 @@
-﻿namespace MKS.EmailValidation.Models
+﻿namespace MKS.ConsumerDataVerification.Models
 {
     public class PostcodeAnywhereError
     {

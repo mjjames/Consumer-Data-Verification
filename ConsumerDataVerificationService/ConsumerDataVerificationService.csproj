@@ -8,8 +8,8 @@
     <ProjectGuid>{90D48A81-1F47-4CC0-9269-06E141EAA3D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MKS.EmailValidation</RootNamespace>
-    <AssemblyName>MKS.EmailValidation</AssemblyName>
+    <RootNamespace>MKS.ConsumerDataVerification</RootNamespace>
+    <AssemblyName>MKS.ConsumerDataVerification</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile96</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace MKS.EmailValidation
+namespace MKS.ConsumerDataVerification
 {
     public class VerificationService
     {

@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using MKS.EmailValidation.EmailVerificationServices;
-using MKS.EmailValidation.Exceptions;
-using MKS.EmailValidation.Models;
+using MKS.ConsumerDataVerification.Exceptions;
+using MKS.ConsumerDataVerification.Models;
 using Newtonsoft.Json;
 
-namespace MKS.EmailValidation.PaymentValidation
+namespace MKS.ConsumerDataVerification.PaymentValidation
 {
     public class PostcodeAnywherePaymentValidationService : IPaymentValidationService
     {

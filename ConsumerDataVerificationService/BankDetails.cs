@@ -1,4 +1,4 @@
-﻿namespace MKS.EmailValidation
+﻿namespace MKS.ConsumerDataVerification
 {
     public class BankDetails
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MKS.EmailValidation.Models
+namespace MKS.ConsumerDataVerification.Models
 {
     public class PostcodeAnywhereResult<T>
     {

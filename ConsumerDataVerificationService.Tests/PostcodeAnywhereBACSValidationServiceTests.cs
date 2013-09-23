@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AssertExLib;
-using MKS.EmailValidation.Exceptions;
-using MKS.EmailValidation.PaymentValidation;
+using MKS.ConsumerDataVerification.Exceptions;
+using MKS.ConsumerDataVerification.PaymentValidation;
 using Xunit;
 
 namespace ConsumerDataVerificationService.Tests
