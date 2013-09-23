@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>MKS.ConsumerDataVerification</id>
+        <version>1.0.0</version>
+        <title>MKS Consumer Data Verification</title>
+        <authors>MK Software Solutions</authors>
+        <projectUrl>http://mksoftwaresolutions.co.uk/</projectUrl>
+        <iconUrl>http://mksoftwaresolutions.co.uk/images/mksoftware-110.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Library for Verifying Consumer Data
+- EMail Address
+- Bank Details
+- Credit Card Details</description>
+        <dependencies>
+            <dependency id="Microsoft.Bcl" version="1.1.3" />
+            <dependency id="Microsoft.Bcl.Async" version="1.0.16" />
+            <dependency id="Microsoft.Bcl.Build" version="1.0.10" />
+            <dependency id="Microsoft.Net.Http" version="2.2.15" />
+            <dependency id="Newtonsoft.Json" version="5.0.6" />
+        </dependencies>
+    </metadata>
+    <files />
+</package>
