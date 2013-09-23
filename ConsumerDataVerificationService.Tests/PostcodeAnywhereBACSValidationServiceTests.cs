@@ -42,7 +42,7 @@ namespace ConsumerDataVerificationService.Tests
         {
             var service = new PostcodeAnywherePaymentValidationService("GE98-CH68-AB88-KU93");
             var result = await service.BankAccountValidation("40-24-18", "58560093");
-            Assert.True(result.IsCorrect);
+            Assert.False(result.IsCorrect);
         }
 
         [Fact]
@@ -50,7 +50,7 @@ namespace ConsumerDataVerificationService.Tests
         {
             var service = new PostcodeAnywherePaymentValidationService("GE98-CH68-AB88-KU93");
             var result = await service.BankAccountValidation("40-14-18", "58560093");
-            Assert.Equal("HSBC", result.Bank.Bank);
+            Assert.Equal("HSBC BANK PLC", result.Bank.Bank);
         }
     }
 }

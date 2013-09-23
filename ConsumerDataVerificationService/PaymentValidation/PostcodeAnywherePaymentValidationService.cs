@@ -29,8 +29,8 @@ namespace MKS.EmailValidation.PaymentValidation
                 var url =
                     string.Format("http://services.postcodeanywhere.co.uk/BankAccountValidation/Interactive/Validate/v2.00/json3.ws?Key={0}&AccountNumber={1}&SortCode={2}",
                                         _apiKey,
-                                        Uri.EscapeDataString(sortcode),
-                                        Uri.EscapeDataString(account)
+                                        Uri.EscapeDataString(account),
+                                        Uri.EscapeDataString(sortcode)
                                     );
                 var result = await client.GetStringAsync(url);
 
