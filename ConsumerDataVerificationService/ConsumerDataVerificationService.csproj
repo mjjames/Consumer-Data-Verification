@@ -37,7 +37,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaymentValidation\PostcodeAnywherePaymentValidationService.cs" />
+    <Compile Include="BankAccountValidationResult.cs" />
+    <Compile Include="BankDetails.cs" />
+    <Compile Include="CreditCardValidationResult.cs" />
     <Compile Include="EmailValidationResult.cs" />
+    <Compile Include="IPaymentValidationService.cs" />
+    <Compile Include="Models\PostcodeAnywhereBankAccountResult.cs" />
+    <Compile Include="Models\PostcodeAnywhereCreditCardValidationResult.cs" />
     <Compile Include="Models\PostcodeAnywhereEmailResult.cs" />
     <Compile Include="EmailVerificationServices\PostCodeAnywhereEmailVerificationService.cs" />
     <Compile Include="Exceptions\PostcodeAnywhereException.cs" />
@@ -45,6 +52,7 @@
     <Compile Include="Models\PostcodeAnywhereError.cs" />
     <Compile Include="Models\PostcodeAnywhereResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusInformation.cs" />
     <Compile Include="VerificationService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +84,7 @@
       <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Threading.Tasks.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

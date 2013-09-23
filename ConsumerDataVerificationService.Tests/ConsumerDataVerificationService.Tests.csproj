@@ -49,6 +49,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostcodeAnywhereBACSValidationServiceTests.cs" />
+    <Compile Include="PostcodeAnywhereCreditCardValidationServiceTests.cs" />
     <Compile Include="PostCodeAnywhereEmailVerificationServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
