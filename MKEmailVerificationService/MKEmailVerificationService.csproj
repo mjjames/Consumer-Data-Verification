@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D9EAF17-7771-4F97-A262-182A8DF6550B}</ProjectGuid>
+    <ProjectGuid>{F9806E5A-B83E-448F-A87A-4B05CE6BC3B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsumerDataVerificationService.Tests</RootNamespace>
-    <AssemblyName>ConsumerDataVerificationService.Tests</AssemblyName>
+    <RootNamespace>MKS.MKEmailVerificationService</RootNamespace>
+    <AssemblyName>MKS.MKEmailVerificationService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,15 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AssertExLib">
-      <HintPath>..\packages\AssertEx.0.9.0\lib\net45\AssertExLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\net45\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\net45\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Rsft.Net.Dns.Core">
+      <HintPath>..\packages\Rsft.Net.Dns.Core.1.0.0.3\lib\net20\Rsft.Net.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rsft.Net.Dns.Net45">
+      <HintPath>..\packages\Rsft.Net.Dns.Net45.1.0.0.4\lib\net45\Rsft.Net.Dns.Net45.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,36 +53,24 @@
       <HintPath>..\packages\Microsoft.Net.Http.2.2.15\lib\net45\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MKEmailVerificationServiceTests.cs" />
-    <Compile Include="MKPaymentValidationServiceTests.cs" />
-    <Compile Include="PostcodeAnywhereBACSValidationServiceTests.cs" />
-    <Compile Include="PostcodeAnywhereCreditCardValidationServiceTests.cs" />
-    <Compile Include="PostCodeAnywhereEmailVerificationServiceTests.cs" />
+    <Compile Include="MKEmailVerificationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsumerDataVerificationService\ConsumerDataVerificationService.csproj">
       <Project>{90D48A81-1F47-4CC0-9269-06E141EAA3D4}</Project>
       <Name>ConsumerDataVerificationService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MKEmailVerificationService\MKEmailVerificationService.csproj">
-      <Project>{f9806e5a-b83e-448f-a87a-4b05ce6bc3b6}</Project>
-      <Name>MKEmailVerificationService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />

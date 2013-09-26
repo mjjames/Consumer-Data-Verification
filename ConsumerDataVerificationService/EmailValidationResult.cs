@@ -7,6 +7,14 @@
             EmailAddress = emailAddress;
         }
 
+        public EmailValidationResult(string emailAddress, bool isFormatValid, bool isDnsValid = false, bool hasMxRecord = false)
+        {
+            EmailAddress = emailAddress;
+            IsFormatValid = isFormatValid;
+            DomainHasDnsRecord = isDnsValid;
+            DomainHasMxRecord = hasMxRecord;
+        }
+
         public string EmailAddress { get; private set; }
         public bool IsValid
         {
