@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using MKS.ConsumerDataVerification;
 using Rsft.Net.Dns;
 using Rsft.Net.Dns.Entities;
+using System;
 
 namespace MKS.MKEmailVerificationService
 {
@@ -30,14 +31,23 @@ namespace MKS.MKEmailVerificationService
             var domain = emailAddress.Substring(emailAddress.IndexOf('@') + 1);
             try
             {
-                var dnsRecord = await Dns.GetHostEntryAsync(domain);
+                await Dns.GetHostEntryAsync(domain).ConfigureAwait(false);
+                var mxResponse = await Dns.QueryAsync(domain, QType.MX).ConfigureAwait(false);
+                return new EmailValidationResult(emailAddress, true, true, mxResponse.RecordsMX.Any());
             }
             catch (SocketException)
             {
                 return new EmailValidationResult(emailAddress, true);
             }
-            var mxResponse = await Dns.QueryAsync(domain, QType.MX);
-            return new EmailValidationResult(emailAddress, true, true, mxResponse.RecordsMX.Any());
+            catch (AggregateException ex)
+            {
+                if (ex.InnerException is SocketException)
+                {
+                    return new EmailValidationResult(emailAddress, true);
+                }
+                throw;
+            }
+
         }
     }
 }
